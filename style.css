@@ -1,0 +1,182 @@
+/* 🌈 Theme Variables */
+:root {
+  --bg-color: #f5f7ff;
+  --text-color: #0f172a;
+  --card-bg: #e0f2fe;
+  --primary-color: #2563eb;
+  --hover-color: #60a5fa;
+}
+
+[data-theme="dark"] {
+  --bg-color: #06122b;
+  --text-color: #e6f1ff;
+  --card-bg: #0b2a4a;
+  --primary-color: #22c55e;
+  --hover-color: #34d399;
+}
+
+/* ✨ Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🌍 Body Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔧 Navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+}
+
+.navbar h1 {
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  margin-left: auto;
+  padding-right: 80px; /* Leaves room for theme toggle */
+}
+
+.navbar ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: var(--hover-color);
+}
+
+/* 🎛️ Theme Toggle Button */
+#themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: radial-gradient(circle at 30% 30%, var(--primary-color), var(--hover-color));
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#themeToggle:hover {
+  transform: scale(1.15);
+}
+#themeToggle:active {
+  transform: scale(0.95);
+}
+
+/* 📦 Main Content Area */
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 🧾 Content Cards */
+section {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔢 Converter Layout */
+.converter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+  color: white;
+  border: none;
+  font-weight: 700;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.result {
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+/* 🔻 Footer */
+footer {
+  background-color: var(--card-bg);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+  }
+
+  .navbar ul li a {
+    padding: 0.4rem 0.8rem;
+  }
+}
+/* 🌙 Dark Mode */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--  Theme Toggle Button (fixed in top-right corner) -->
+  <button id="themeToggle" title="Toggle Theme">🌙</button>
+
+  <header>
+    <nav class="navbar">
+      <h1> Temperature Converter</h1>
+      <ul>
+        <li><a href="#home" onclick="route('home')">Home</a></li>
+        <li><a href="#formulas" onclick="route('formulas')">Formulas</a></li>
+        <li><a href="#celsius-fahrenheit" onclick="route('cf')">Celsius ↔ Fahrenheit</a></li>
+        <li><a href="#celsius-kelvin" onclick="route('ck')">Celsius ↔ Kelvin</a></li>
+        <li><a href="#fahrenheit-kelvin" onclick="route('fk')">Fahrenheit ↔ Kelvin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app">
+    <!-- Dynamic content will load here -->
+  </main>
+
+  <footer>
+    <p> Created with  by devi prasad </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
